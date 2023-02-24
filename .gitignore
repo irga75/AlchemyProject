@@ -1,0 +1,10 @@
+# Default ignored files
+shelf
+__pycache__
+workspace.xml
+modules.xml
+misc.xml
+AlchemyProject.iml
+inspectionProfiles
+venv
+.idea
