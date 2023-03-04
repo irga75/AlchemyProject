@@ -13,11 +13,27 @@
 <body>
 <header>
     <div class="p-3 mb-2 bg-light text-dark">
-        <h1>Миссия Колонизация Марса
-        <small class="text-muted">Mars One</small>
-        </h1>
+    <table class="h1_table">
+   <tr>
+    <td style="width: 35%;"><h1>Миссия Колонизация Марса</h1></td>
+    <td style="width: 55%; font-size: x-large;"><span class="text-muted">Mars One</span></td>
+    <td style="width: 10%;">
+        {% if current_user.is_authenticated %}
+            <a class="navbar-brand" href="/logout" style="font-size: x-large;">{{ current_user.name }}</a>
+        {% else %}
+        <pre>
+            <a class="btn btn-success" href="/login">Войти</a>   <a class="btn btn-primary " href="/register">Зарегистрироваться</a>
+            </pre>
+        {% endif %}
+    </td>
+   </tr>
+  </table>
+
+
     </div>
+    <div style="margin: 20px;">
     <h4>И на Марсе будут яблони цвести!</h4>
+    </div>
 </header>
 <!-- Begin page content -->
 <main role="main" class="container">
